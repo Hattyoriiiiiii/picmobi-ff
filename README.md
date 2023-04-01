@@ -1,31 +1,48 @@
-# Application
+![header](assets/images/header.png)
 
-A new Flutter project.
+## About
+
+- Our innovative service aims to support the shopping needs of elderly people with limited mobility and those who have lost their driver's licenses. 
+- Users simply take a photo of the product they wish to purchase, and our mobility team delivers the item to a nearby hub. 
+- Through this service, we strive to assist in shopping and foster a culture that values community.
 
 ## Getting Started
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
+#### Step 1: Installing Flutter
 
-### IMPORTANT:
+Before running Flutter, you must have the Flutter SDK installed on your computer. If you don't have Flutter installed yet, you can download and install Flutter from [here](https://docs.flutter.dev/get-started/install).
 
-For projects with Firestore integration, you must first run the following commands to ensure the project compiles:
+#### Step 2: Installing Dependencies
 
-```
+To install the dependencies, run the following command in the root directory of the project:
+
+```zsh
 flutter pub get
-flutter packages pub run build_runner build --delete-conflicting-outputs
 ```
 
-This command creates the generated files that parse each Record from Firestore into a schema object.
+#### Step 3: Running the App
 
-### Getting started continued:
+To run the app, run the following command in the root directory of the project:
 
-This project is a starting point for a Flutter application.
+```zsh
+flutter build web
+```
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## ラズパイの設定
+
+```
+python3 -m venv venv
+source venv/bin/activate
+pip3 install --upgrade pip
+pip3 install --upgrade firebase-admin
+pip3 install gpsd-py3
+
+# ラズパイにsshで接続
+ssh 
+
+# ラズパイにscpでファイルを転送
+scp -r firebase-sdk.json user@raspberrypi.local:~/
+```
